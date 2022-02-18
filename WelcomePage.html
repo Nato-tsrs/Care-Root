@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img class="logoo" src="photos/logo.png" width="250px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a> </li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li><a href="product-details.html">Product  Details</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"> <img src="Photos/cart.png" width="30px" height="30px"></a>
+            <img src="Photos/menu.png" class="menu-icon" 
+            onclick="menutoggle()">
+        </div>
+    </div> 
+<!--------------About us page----------->
+
+<img class="img1" src="photos/welcome.gif" width="300"></img>
+<img  class="img2"src="photos/toCare.gif" width="300"></img>
+<img class="img3" src="photos/Root.gif" width="300"></img>
+
+<img class="racoonWelcome" src="photos/avocado.gif"></img>
+<button class="goBack" onclick="goBack()">Go Back to Products</button>
+<script>
+    function goBack(){
+        window.location.href = 'products.html';
+    }
+</script>
+ <!------- FOOOTER ------->
+ <div class="footer">
+     <div class="container">
+         <div class="row">
+           
+             <div class="footer-col-2">
+                 <img src="Photos/logo.png">
+                <p>Our mission is to encourage 
+                    Society to become more involved into helping ones in need 
+                   and just do act of kindness </p> 
+            </div>
+            <div class="footer-col-3">
+                <h3>Contributions:</h3>
+                <ul>
+                    <li>...</li>
+                    <li>...</li>
+                    <li>Nato Tsertsvadze</li>
+                </ul>
+           </div>
+           <div class="footer-col-4">
+            <h3>Follow us on</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>LinkedIn</li>
+                <li>Instagram</li>
+                <li>Tweeter</li>
+            </ul>
+        </div>
+         </div>
+         <hr>
+         <p class="copyright">&copy Copyright 2022 - Kutaisi International University</p>
+     </div>
+ </div>
+ <!------------TOGGLE MENU--------->
+ <script>
+     var MenuItem = document.getElementById("MenuItems");
+
+     MenuItem.style.maxHeight = "0px";
+
+     function menutoggle() {
+         if(MenuItem.style.maxHeight == "0px") 
+         {
+             MenuItem.style.maxHeight = "200px"
+         }
+         else {
+             MenuItem.style.maxHeight = "0px";
+         }
+     }
+     var ProductImg = document.getElementById("ProductImg");
+     var SmallImg = document.getElementsByClassName("small-img");
+
+     SmallImg[0].onclick = function() {
+         ProductImg.src = SmallImg[0].src;
+     }
+     SmallImg[1].onclick = function() {
+         ProductImg.src = SmallImg[1].src;
+     }
+     SmallImg[2].onclick = function() {
+         ProductImg.src = SmallImg[2].src;
+     }
+     SmallImg[3].onclick = function() {
+         ProductImg.src = SmallImg[3].src;
+     }
+ </script>
+</body>
+</html>
